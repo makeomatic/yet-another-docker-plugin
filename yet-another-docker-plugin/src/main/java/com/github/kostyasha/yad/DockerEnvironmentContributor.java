@@ -43,8 +43,8 @@ public class DockerEnvironmentContributor extends EnvironmentContributor {
                     if (!uriBuilder.getScheme().equals("unix")) {
                         uriBuilder.setScheme("tcp");
                     }
-                    listener.getLogger().println("[YAD-PLUGIN] DOCKER_HOST variable.");
-                    envs.put("DOCKER_HOST", uriBuilder.toString());
+                    // listener.getLogger().println("[YAD-PLUGIN] DOCKER_HOST variable.");
+                    // envs.put("DOCKER_HOST", uriBuilder.toString());
                 }
             } catch (URISyntaxException e) {
                 listener.error("Can't build 'DOCKER_HOST' variable: {}", e.getMessage());
